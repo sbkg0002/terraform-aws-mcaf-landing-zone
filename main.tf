@@ -135,3 +135,7 @@ resource "aws_s3_account_public_access_block" "master" {
   ignore_public_acls      = true
   restrict_public_buckets = true
 }
+
+resource "aws_iam_service_linked_role" "AWSServiceRoleForOrganizations" {
+  aws_service_name = "elasticbeanstalk.amazonaws.com"
+}
